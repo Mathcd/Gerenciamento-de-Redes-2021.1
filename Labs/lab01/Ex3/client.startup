@@ -1,0 +1,5 @@
+# interface de rede
+ifconfig eth0 200.131.134.10 netmask 255.255.255.0 broadcast 200.131.134.255 up
+
+# gateway padrao
+route add default gw 200.131.134.1 dev eth0

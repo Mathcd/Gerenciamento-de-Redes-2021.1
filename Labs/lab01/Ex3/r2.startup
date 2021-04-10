@@ -1,0 +1,19 @@
+## interfaces de rede
+
+# interface eth0
+ifconfig eth0 10.1.1.6 netmask 255.255.255.252 broadcast 10.1.1.7 up
+
+# interface eth1
+ifconfig eth1 200.131.133.1 netmask 255.255.255.0 broadcast 200.131.133.255 up
+
+# interface eth2
+ifconfig eth2 10.1.1.1 netmask 255.255.255.252 broadcast 10.1.1.3 up
+
+
+## configuracao de rotas
+
+# dominio de colisao C
+route add -net 200.131.132.0 netmask 255.255.255.0 gw 10.1.1.5 dev eth0
+
+# dominio de colisao E
+route add -net 200.131.134.0 netmask 255.255.255.0 gw 10.1.1.2 dev eth2
